@@ -2,41 +2,297 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
+    box-sizing: border-ox;
     font-family: 'Roboto', sans-serif;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 3px 0;
+    margin-top: 5px;
+}
+.pop{
+    text-align: none;
+    background-color: #333;
+    color: white;
+    padding: 0;
+}
+.pop h1{
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    gap: 20px;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li{
+    margin: 0;
+    align-items: center;
+    flex-grow: 1;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease;
+}
+nav a:hover{
+    border-bottom: 2px solid white;
+}
+nav a.active{
+    border-bottom: 2px solid white;
+}
+.search-bar{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.search-bar input{
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: -1px;
+}
+.search-bar button{
+    padding: 1px;
+    color: blue;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+}
+.search-bar i{
+    font-size: 12px;
+}
+.search-bar input:focus{
+    outline: none;
+    border-color:rgb(85, 24, 24);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.wrapper{
+    width: 100%;
+    min-height: 75vh;
+    background-image: url("images/Angeli.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-section{
+    width: 50%;
+    line-height: 1;
+}
+.content h1{
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+.content p{
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-top: 25px;
+    line-height: 1.5;
+    color: #fff;
 }
 
 section{
-    min-height: 100vh;
-    background-image: url("images/Angeli.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #f8f8f8;
+    padding: 40px 0;
 }
-
-.container{
-    width: 85%;
-    margin: auto;
+.article{
+    max-width: 800px;
+    margin: 0 auto;
 }
-
-.nav{
-    height: 80px;
+h2, h3{
+    color: #333;
+    margin-top: 50px;
 }
-
-.nav h1{
-    float: left;
-    line-height: 80px;
-    font-size: 35px;
-    font-size: inline;
-    color: #eb7620;
+p{
+    color: #000;
+    line-height: 1.6;
+    margin-top: 50px;
 }
-
-.nav ul{
-    float: right;
-    line-height: 80px;
-}
-
-.nav ul li{
+.btn{
     display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    background-color: #555;
+    transition: 2s ease;
+}
+
+.hero{
+    max-width: 1200px;
+    width: 95%;
+    margin-top: 50px;
+}
+.slider-wrapper{
+    position: relative;
+}
+.slider-wrapper .slide-button{
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.5rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    transform: translateY(-50%);
+}  
+.slider-wrapper .slide-button:hover{
+    background: #404040;
+}
+.slider-wrapper .slide-button#prev-slide{
+    left: -25px;
+}
+.slider-wrapper .slide-button#next-slide{
+    right: -25px;
+}
+.slider-wrapper .image-list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
     list-style: none;
-    padding: 0px 5px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+.slider-wrapper .image-list .image-item{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.hero .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.slider-scrollbar .scrollbar-track{
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+.slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px){
+    .slider-wrapper .slide-button {
+      display: none !important;
+    }
+    .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+    .slider-wrapper .image-list .image-item {
+      width: 280px;
+      height: 380px;
+    }
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+}
+.features-section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.feature{
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature img{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.about-section{
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member{
+    margin-top: 20px;
+}
+
+.team-member a{
+    margin: 0 10px;
+    color: #333;
 }
