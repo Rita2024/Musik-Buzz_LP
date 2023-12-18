@@ -130,7 +130,7 @@ h2, h3{
 p{
     color: #000;
     line-height: 1.6;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .btn{
     display: inline-block;
@@ -284,15 +284,24 @@ p{
 }
 
 .about-section{
+    background-color: antiquewhite;
     margin: 20px;
     text-align: center;
 }
 
-.team-member{
+p{
+    color: #000;
+    line-height: 1.6;
     margin-top: 20px;
 }
 
+.team-member{
+    display: flexbox;
+    justify-content: space-around;
+    margin: 10px;
+}
+
 .team-member a{
-    margin: 0 10px;
+    margin: 10px;
     color: #333;
 }
